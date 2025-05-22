@@ -92,3 +92,89 @@ pdf.section_body("\n".join(projects))
 pdf_path = "/mnt/data/Raspberry_Pi_OS_Commands_and_Projects.pdf"
 pdf.output(pdf_path)
 pdf_path
+
+
+
+pwd: Print current working directory.
+Example: pwd → /home/pi
+cd <directory>: Change to a directory.
+Example: cd Documents
+cd ..: Move up one directory.
+cd ~: Go to home directory.
+cd /: Go to root directory.
+ls: List files and directories.
+ls -l: Detailed list (permissions, size, etc.).
+ls -a: Show hidden files.
+ls -la: Detailed list including hidden files.
+tree: Display directory structure (install with sudo apt install tree).
+File and Directory Management
+touch <filename>: Create an empty file.
+Example: touch test.txt
+mkdir <dirname>: Create a directory.
+Example: mkdir myfolder
+rm <filename>: Remove a file.
+Example: rm test.txt
+rm -r <dirname>: Remove a directory and its contents.
+Example: rm -r myfolder
+cp <source> <destination>: Copy a file.
+Example: cp file.txt /home/pi/backup/
+mv <source> <destination>: Move or rename a file/directory.
+Example: mv file.txt newfile.txt
+find <path> -name <filename>: Search for a file.
+Example: find /home -name "*.txt"
+ln -s <source> <linkname>: Create a symbolic link.
+Example: ln -s /home/pi/file.txt link
+cat <filename>: Display file contents.
+Example: cat file.txt
+less <filename>: View file contents with scrolling (press q to quit).
+File Editing
+nano <filename>: Open file in Nano editor.
+Example: nano script.py
+vim <filename>: Open file in Vim editor.
+echo "text" > <filename>: Write text to a file (overwrites).
+Example: echo "Hello" > file.txt
+echo "text" >> <filename>: Append text to a file.
+Example: echo "World" >> file.txt
+File Inspection
+head <filename>: Display first 10 lines of a file.
+Example: head file.txt
+tail <filename>: Display last 10 lines of a file.
+wc <filename>: Count lines, words, characters in a file.
+Example: wc file.txt
+file <filename>: Show file type.
+Example: file image.jpg
+Permissions
+chmod <permissions> <filename>: Change file permissions.
+Example: chmod 755 script.sh
+chown <user> <filename>: Change file owner.
+Example: chown pi file.txt
+ls -l: Check file permissions.
+sudo: Run a command as superuser.
+Example: sudo nano /etc/config
+System Information
+uname -a: Display system information.
+df -h: Show disk space usage (human-readable).
+free -h: Display memory usage.
+top: Monitor running processes (press q to quit).
+htop: Interactive process viewer (install with sudo apt install htop).
+uptime: Show system uptime and load.
+whoami: Display current user.
+hostname: Show system hostname.
+Package Management
+sudo apt update: Update package lists.
+sudo apt upgrade: Upgrade installed packages.
+sudo apt install <package>: Install a package.
+Example: sudo apt install vim
+sudo apt remove <package>: Remove a package.
+sudo apt autoremove: Remove unused dependencies.
+Networking
+ping <host>: Check connectivity to a host.
+Example: ping google.com
+ifconfig: Display network interfaces (or use ip addr).
+wget <url>: Download a file from the web.
+Example: wget http://example.com/file
+curl <url>: Fetch data from a URL.
+Example: curl http://example.com
+System Control
+sudo reboot: Restart the Raspberry Pi.
+Example: sudo reboot
